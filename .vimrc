@@ -104,3 +104,19 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+" Force the cursor onto a new line after 72 characters
+autocmd FileType gitcommit set textwidth=72
+
+" Colour the 73rd column so that we don’t type over our limit
+autocmd FileType gitcommit set colorcolumn=+1
+
+" Also colour the 51st column (for titles)
+autocmd FileType gitcommit set colorcolumn+=51
+
+" Spell check all git commit messages
+au BufNewFile,BufRead COMMIT_EDITMSG set spell
+
+" Underline misspelled words
+hi clear SpellBad
+hi SpellBad cterm=underline
