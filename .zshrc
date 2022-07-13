@@ -1,8 +1,6 @@
 
 ZSH_DISABLE_COMPFIX=true
 
-
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:/Users/wtc/Library/Python/3.9/bin:$HOME/.local/bin:${KREW_ROOT:-$HOME/.krew}/bin:$PATH
 
@@ -108,3 +106,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+. ~/.zsh_aliases
