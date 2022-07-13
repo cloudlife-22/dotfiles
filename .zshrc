@@ -78,6 +78,9 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+# 
+source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
+
 
 # kube-ps1
  source "$(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh"
@@ -107,3 +110,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 . ~/.zsh_aliases
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
